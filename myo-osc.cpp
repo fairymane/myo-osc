@@ -83,6 +83,7 @@ public:
         using std::asin;
         using std::sqrt;
 
+        std::cout<<"orientation fucntion called"<<std::endl;
         // Calculate Euler angles (roll, pitch, and yaw) from the unit quaternion.
         float roll = atan2(2.0f * (quat.w() * quat.x() + quat.y() * quat.z()),
                            1.0f - 2.0f * (quat.x() * quat.x() + quat.y() * quat.y()));
@@ -185,7 +186,7 @@ public:
             // Print out a placeholder for the arm and pose when Myo doesn't currently know which arm it's on.
             std::cout << "[?]" << '[' << std::string(14, ' ') << ']';
         }
-
+        std::cout<< "row_w: "<<row_w <<" pitch_w: "<<pitch_w << " yaw_w: "<<yaw_w; 
         std::cout << std::flush;
     }
 
